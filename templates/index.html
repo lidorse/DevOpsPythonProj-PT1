@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SERI-AIR Flights</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body style="background: #DCDCDC ">
+
+    <div class="w3-display-container" style="margin-bottom:50px">
+      <img src="{{ homeImg }}" style="width:100%">
+      <div class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small"
+       style="bottom:80%;opacity:0.7;width:70%">
+      <h2><b>Welcome to SERI-AIR Website<br>The best company to travel with!</b></h2>
+    </div>
+    </div>
+
+  <form action="http://127.0.0.1:5000/login" method="GET">
+    <div class="w3-row w3-container" style="margin:50px 0">
+    <div class="w3-half w3-container">
+      <div class="w3-topbar w3-border-amber">
+        <img src="{{ loginImg }}" style="width:75%">
+        <h3><button>Log-In</button></h3>
+        <p>Access your personal info</p>
+      </div>
+    </div>
+  </form>
+
+  <form action="http://127.0.0.1:5000/register" method="GET">
+
+    <div class="w3-half w3-container">
+      <div class="w3-topbar w3-border-amber">
+        <img src="{{ regImg }}" style="width:100%">
+        <h3><button>Registration</button></h3>
+        <p>Become a member with us!</p>
+      </div>
+    </div>
+  </form>
+
+  <form action="http://127.0.0.1:5000/flights" method="GET">
+    <div class="w3-row w3-container" style="margin:50px 0">
+    <div class="w3-half w3-container">
+      <div class="w3-topbar w3-border-orange">
+        <img src="{{ flightImg }}" style="width:60%">
+        <h3><button>Availble Flights</button></h3>
+        <p>See all our flights</p>
+      </div>
+    </div>
+    </div>
+  </form>
+
+<p></p>
+    <form action="http://127.0.0.1:5000/admin">
+    <center><button>Admin access</button></center>
+    </form>
+</body>
+</html>
