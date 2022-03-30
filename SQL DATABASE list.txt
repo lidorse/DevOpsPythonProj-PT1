@@ -1,0 +1,36 @@
+CREATE TABLE "Users" (
+	"id"	INTEGER,
+	"fullName"	TEXT NOT NULL,
+	"password"	TEXT NOT NULL,
+	"realId"	TEXT UNIQUE,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+
+
+CREATE TABLE "Flights" (
+	"flightId"	INTEGER,
+	"timeStamp"	datetime,
+	"reamainingSeats"	INTEGER,
+	"OriginCountryId"	INTEGER,
+	"destCountryId"	INTEGER,
+	FOREIGN KEY("destCountryId") REFERENCES "Countries"("code"),
+	FOREIGN KEY("OriginCountryId") REFERENCES "Countries"("code"),
+	PRIMARY KEY("flightId")
+);
+
+
+CREATE TABLE "Tickets" (
+	"ticketId"	INTEGER,
+	"userId"	INTEGER,
+	"flightId"	INTEGER,
+	FOREIGN KEY("flightId") REFERENCES "Flights"("flightId"),
+	FOREIGN KEY("userId") REFERENCES "Users"("id"),
+	PRIMARY KEY("ticketId" AUTOINCREMENT)
+);
+
+
+CREATE TABLE "Countries" (
+	"code"	INTEGER,
+	"name"	TEXT NOT NULL,
+	PRIMARY KEY("code" AUTOINCREMENT)
+);
