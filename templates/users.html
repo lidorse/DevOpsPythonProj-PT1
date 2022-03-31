@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Users</title>
+    <style>
+	    table, tr, th, td {
+	        border: 2px solid black;
+	        border-collapse:collapse;
+	        width:700px;
+	    }
+	    th {
+	        background:#3a6070;
+	        color: #FFF;
+	        padding: 4px 30px 4px 8px;
+	    }
+	    td {
+	        border: 1px solid #e3e3e3;
+	        passing: 4px 8px;
+	    }
+	    tr {
+	        nth-child(odd) td{
+	            background-color: #e7edf0
+	        }
+	    }
+    </style>
+</head>
+<body style="background: #DCDCDC ">
+    <table width="1000px" border="1px">
+        <tr>
+            <th>User Id</th>
+            <th>FullName</th>
+            <th>Password</th>
+            <th>ID Number</th>
+        </tr>
+        {% for row in userData: %}
+        <tr>
+            {% for cell in row %}
+            <td>{{ cell }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
